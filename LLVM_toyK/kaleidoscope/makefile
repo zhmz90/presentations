@@ -4,5 +4,10 @@ kaleidoscope: lexer_parser_ast_cgen.cpp
 lexer: lexer.cpp
 	clang++ -g lexer.cpp  `llvm-config --cxxflags --ldflags --system-libs --libs core mcjit native` -O3 \
 	-o lexer 
+
 codegen: codegen.cpp
 	clang++ -g codegen.cpp  `llvm-config --cxxflags --ldflags --system-libs --libs core mcjit native` -O3 -o codegen
+parser_ast: parser_ast.cpp
+	clang++ -g parser_ast.cpp  `llvm-config --cxxflags --ldflags --system-libs --libs core mcjit native` -O3 \
+	-o parser_ast
+
