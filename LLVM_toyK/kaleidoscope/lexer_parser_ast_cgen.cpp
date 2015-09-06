@@ -738,6 +738,7 @@ static void MainLoop()
     while (1)
     {
         fprintf(stderr,"ready>");
+        fprintf(stdout,"CurTok is %d\n",CurTok);
         switch (CurTok)
         {
             case tok_eof:

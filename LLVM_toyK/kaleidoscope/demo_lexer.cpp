@@ -1,15 +1,15 @@
-include "library.h"
+#include "library.h"
 
-
+#include "lexer.cpp"
 
 static void main_loop()
 {
     while (1)
     {
         fprintf(stderr,"kaleidoscope>");
-      //  switch (CurTok)
+        switch (CurTok)
         {
-            case 1 //tok_eof:
+            case 1: //tok_eof:
                 return;
             case ';':
               //  getNextToken();
