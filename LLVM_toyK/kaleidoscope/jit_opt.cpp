@@ -13,7 +13,7 @@
 #include <map>
 #include <string>
 #include <vector>
-#include "../include/KaleidoscopeJIT.h"
+#include "KaleidoscopeJIT.h"
 
 using namespace llvm;
 using namespace llvm::orc;
@@ -606,7 +606,7 @@ static void HandleTopLevelExpression() {
 /// top ::= definition | external | expression | ';'
 static void MainLoop() {
   while (1) {
-    fprintf(stderr, "ready> ");
+    fprintf(stderr, "kaleidoscope> ");
     switch (CurTok) {
     case tok_eof:
       return;
@@ -659,7 +659,7 @@ int main() {
   BinopPrecedence['*'] = 40; // highest.
 
   // Prime the first token.
-  fprintf(stderr, "ready> ");
+  fprintf(stderr, "kaleidoscope> ");
   getNextToken();
 
   TheJIT = llvm::make_unique<KaleidoscopeJIT>();
