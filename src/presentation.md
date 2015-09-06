@@ -47,6 +47,11 @@
     \includegraphics[width=4in,height=3in]{images/llvm_tk3.jpg}
 \end{center}
 
+## kaleidoscope
+
+[kaleidoscope at my Github](http://dllab.org/kaleidoscope)
+
+
 ## introduction to Julia internal
     
   
