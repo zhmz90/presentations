@@ -6,7 +6,8 @@ lexer: lexer.cpp
 	-o lexer 
 
 codegen: codegen.cpp
-	clang++ -g codegen.cpp  `llvm-config --cxxflags --ldflags --system-libs --libs core mcjit native` -O3 -o codegen
+	clang++ -g codegen.cpp  `llvm-config --cxxflags --ldflags --system-libs --libs core` -O3 -o codegen -rdynamic -v -fno-rtti 
+
 parser_ast: parser_ast.cpp
 	clang++ -g parser_ast.cpp  `llvm-config --cxxflags --ldflags --system-libs --libs core mcjit native` -O3 \
 	-o parser_ast
