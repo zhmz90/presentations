@@ -13,3 +13,6 @@ codegen: codegen.cpp
 jit_opt: jit_opt.cpp
 	clang++ -g jit_opt.cpp  `llvm-config --cxxflags --ldflags --system-libs --libs core mcjit native` -O3 -o jit_opt -rdynamic -v -fno-rtti 
 
+if: if.cpp
+	clang++ -g if.cpp  `llvm-config --cxxflags --ldflags --system-libs --libs core mcjit native` -O3 -o if -rdynamic -v -fno-rtti 
+
