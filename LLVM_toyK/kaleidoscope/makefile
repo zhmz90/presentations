@@ -15,4 +15,6 @@ jit_opt: jit_opt.cpp
 
 if: if.cpp
 	clang++ -g if.cpp  `llvm-config --cxxflags --ldflags --system-libs --libs core mcjit native` -O3 -o if -rdynamic -v -fno-rtti 
+user_defined_types: user_defined_types.cpp
+	clang++ -g user_defined_types.cpp  `llvm-config --cxxflags --ldflags --system-libs --libs core mcjit native` -O3 -o user_defined_types -rdynamic -v -fno-rtti 
 
